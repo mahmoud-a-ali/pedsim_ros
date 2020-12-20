@@ -15,17 +15,17 @@ $ rosrun pedsim_gazebo_plugin pedsim_to_gazbo_world.py
 ```
 This script will ask you to enter the name of the scenario you want to convert to gazebo world (in this case it is `social_contexts.xml`). NOte that the scenario_file should be stored in the `pedsim_simulator/scenarios/` directory,
 ```
-social_contexts.xml
+$ social_contexts.xml
 ```
 
 #### Step 2. in one terminal run the `social_contexts.xml` scenario in pedsim simulator using the `airport_activities.launch`
 ```
-$ roslaunch pedsim_simulator simple_ped.launch
+$ roslaunch pedsim_simulator simple_pedestrians.launch
 ```
 
 #### Step 3. in another terminal run the launch file generated from step 1 `social_contexts.launch` 
 ```
-$ roslaunch pedsim_gazebo_plugin simple_pedestrians.launch
+$ roslaunch pedsim_gazebo_plugin social_contexts.launch
 ```
 
 #### Step 4. To synchronize your own robot with the diff_robot that is included in the pedsim package: 
